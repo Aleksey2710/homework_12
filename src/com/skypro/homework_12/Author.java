@@ -19,9 +19,6 @@ public class Author {
         return lastName;
     }
 
-    public void getFullName() {
-        System.out.println(firstName + " " + lastName);
-    }
 
     public void setFirstName(String firstName) {
         if (firstName.isBlank()) {

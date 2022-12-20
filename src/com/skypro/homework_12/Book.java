@@ -17,10 +17,6 @@ public class Book {
         this.author = author;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
-
 
     public String getNameBook() {
         return this.nameBook;
