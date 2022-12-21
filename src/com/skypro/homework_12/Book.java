@@ -1,6 +1,7 @@
 package com.skypro.homework_12;
 
 import javax.security.sasl.AuthorizeCallback;
+import java.util.Objects;
 
 public class Book {
     private String nameBook;
@@ -33,18 +34,20 @@ public class Book {
     public void setStartAge(int startAge) {
         this.startAge = startAge;
     }
+
     @Override
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Book c2 = (Book) other;
-        return nameBook.equals(c2.nameBook);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return startAge == book.startAge && Objects.equals(nameBook, book.nameBook);
     }
+
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(nameBook);
+        return Objects.hash(nameBook, startAge);
     }
+
     @Override
     public String toString() {
         return nameBook + ", " + author + ", " + startAge;

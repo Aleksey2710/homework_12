@@ -1,5 +1,7 @@
 package com.skypro.homework_12;
 
+import java.util.Objects;
+
 public class Author {
     private String firstName;
     private String lastName;
@@ -36,22 +38,22 @@ public class Author {
             this.lastName = lastName;
         }
     }
-    @Override
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Author c2 = (Author) other;
-        return lastName.equals(c2.lastName);
-    }
-    @Override
-    public int hashCode() {
-        return java.util.Objects.hash(lastName);
-    }
 
     @Override
     public String toString() {
         return firstName + " " + lastName;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(firstName, author.firstName) && Objects.equals(lastName, author.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName);
+    }
 }
