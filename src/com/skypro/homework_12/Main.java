@@ -12,14 +12,16 @@ public class Main {
         Book zapiskiOhotnika = new Book("Записки охотника", ivanTurgenev, 1831);
 
 
-        System.out.println(zapiskiOhotnika.getNameBook() + ", " + zapiskiOhotnika.getAuthor().getFirstName() + " " + zapiskiOhotnika.getAuthor().getLastName() + ", " + zapiskiOhotnika.getStartAge());
-        System.out.println(onegin.getNameBook() + ", " + onegin.getAuthor().getLastName() + " " + onegin.getAuthor().getFirstName() + ", " + onegin.getStartAge());
+//        System.out.println(zapiskiOhotnika.getNameBook() + ", " + zapiskiOhotnika.getAuthor().getFirstName() + " " + zapiskiOhotnika.getAuthor().getLastName() + ", " + zapiskiOhotnika.getStartAge());
+//        System.out.println(onegin.getNameBook() + ", " + onegin.getAuthor().getFirstName() + " " + onegin.getAuthor().getLastName() + ", " + onegin.getStartAge());
 
         onegin.setStartAge(1831);
         zapiskiOhotnika.setStartAge(1852);
 
-        System.out.println(zapiskiOhotnika.getNameBook() + ", " + zapiskiOhotnika.getAuthor().getFirstName() + " " + zapiskiOhotnika.getAuthor().getLastName() + ", " + zapiskiOhotnika.getStartAge());
-        System.out.println(onegin.getNameBook() + ", " + onegin.getAuthor().getLastName() + " " + onegin.getAuthor().getFirstName() + ", " + onegin.getStartAge());
+//        System.out.println(zapiskiOhotnika.getNameBook() + ", " + zapiskiOhotnika.getAuthor().getFirstName() + " " + zapiskiOhotnika.getAuthor().getLastName() + ", " + zapiskiOhotnika.getStartAge());
+//        System.out.println(onegin.getNameBook() + ", " + onegin.getAuthor().getFirstName() + " " + onegin.getAuthor().getLastName() + ", " + onegin.getStartAge());
 
+        System.out.println(onegin);
+        System.out.println(zapiskiOhotnika);
     }
 }
